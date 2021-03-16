@@ -28,3 +28,33 @@ def median(original: Image.Image, core: list) -> Image.Image:
             new_image[y, x] = med
 
     return Image.fromarray(new_image.astype(np.uint8)).convert("RGB")
+
+
+def add_salt_and_pepper(image : Image.Image, amount: float = 0.005, s_vs_p: float = 0.5) -> Image.Image:
+    image = np.array(image)
+    row, col, ch = image.shape
+    out = np.copy(image)
+    # Salt mode
+    num_salt = np.ceil(amount * image.size * s_vs_p)
+    coords = [np.random.randint(0, i - 1, int(num_salt))
+              for i in image.shape]
+    out[coords] = 1
+
+    # Pepper mode
+    num_pepper = np.ceil(amount * image.size * (1. - s_vs_p))
+    coords = [np.random.randint(0, i - 1, int(num_pepper))
+              for i in image.shape]
+    out[coords] = 0
+
+    return Image.fromarray(out.astype(np.uint8)).convert("L").convert("RGB")
+
+def gauss_noise(image: Image.Image) -> Image.Image:
+    image = np.array(image)
+    row, col, ch = image.shape
+    mean = 0
+    var = 0.5
+    sigma = var ** 0.9
+    gauss = np.random.normal(mean, sigma, (row, col, ch))
+    gauss = gauss.reshape(row, col, ch)
+    out = image + gauss
+    return Image.fromarray(out.astype(np.uint8)).convert("RGB")
