@@ -1,4 +1,4 @@
 /.idea/*
-venv/*
+pyenv_pai/*
 *.mp4
 */__pycache__/*
