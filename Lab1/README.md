@@ -2,9 +2,9 @@
 
 ## Тема: Передискретизация, обесцвечивание и бинаризация растровых изображений
 
-### Студент: Камолов Амир
-
-### Группа: Б18-514
+|**Студент:**|*Камолов Амир*|
+|------------|--------------|
+|**Группа:** |*Б18-514*     |
 
 ### 1. Передискретизация
 
@@ -34,7 +34,6 @@
 
 Интерполяция в 3 раза. Исходный размер `720x720` результирующий размер `2160x2160`:
 
-
 ![UpsamplingX3](res/upsampling3_spiral1.png)
 
 #### 1.2 Сжатие (децимация) изображения в N раз
@@ -56,7 +55,6 @@
 Децимация в 3 раза. Исходный размер `720x720` результирующий размер `240x240`:
 
 ![DownsamplingX3](res/downsampling3_spiral1.png)
-
 
 #### 1.3 Передискретизация изображения в K=M/N раз путём растяжения и последующего сжатия (в два прохода)
 
@@ -90,7 +88,6 @@
 
 Результирующее изображение с обычными коэффицентами:
 
-
 ![SemitoneNormal](res/halftone_test10.png)
 
 Результирующее изображение с коэффицентами photoshop:
@@ -105,7 +102,6 @@
 
 Результирующее изображение с обычными коэффицентами:
 
-
 ![SemitoneNormal](res/halftone_test11.jpg)
 
 Результирующее изображение с коэффицентами photoshop:
@@ -118,27 +114,24 @@
 
 Исходное изображение:
 
-![Original](../original/cat.jpg)
+![Original](res/downsampling_cat2.jpg)
 
+|**B \ K**		|					0.2								   |					0.6				    			  |					0.8                                  |
+|---------------|------------------------------------------------------|------------------------------------------------------|------------------------------------------------------|
+|**20** 		|![kristian_threshold](res/threshold_b20_k0.2_cat2.jpg)|![kristian_threshold](res/threshold_b20_k0.6_cat2.jpg)|![kristian_threshold](res/threshold_b20_k0.8_cat2.jpg)|
+|**40**			|![kristian_threshold](res/threshold_b40_k0.2_cat2.jpg)|![kristian_threshold](res/threshold_b40_k0.6_cat2.jpg)|![kristian_threshold](res/threshold_b40_k0.8_cat2.jpg)|
+|**80**			|![kristian_threshold](res/threshold_b80_k0.2_cat2.jpg)|![kristian_threshold](res/threshold_b80_k0.6_cat2.jpg)|![kristian_threshold](res/threshold_b80_k0.8_cat2.jpg)|
 
-Результирующее изображение c `k = 0.2`, `b = 15`:
-
-![kristian_threshold](res/threshold_cat.jpg)
-
-Результирующее изображение c `k = 0.5`, `b = 10`:
-
-![kristian_threshold](res/threshold_10x05cat.jpg)
 
 ---
 
 Исходное изображение:
 
-![Original](../original/text1.jpg)
+![Original](res/downsampling2_text1.jpg)
 
-Результирующее изображение c `k = 0.2`, `b = 15`:
+|**B \ K**		|					0.2									|					0.6									|					0.8                                 |
+|---------------|-------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------|
+|**20** 		|![kristian_threshold](res/threshold_b20_k0.2_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b20_k0.6_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b20_k0.6_downsampling2_text1.jpg)|
+|**40**			|![kristian_threshold](res/threshold_b40_k0.2_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b20_k0.6_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b20_k0.6_downsampling2_text1.jpg)|
+|**80**			|![kristian_threshold](res/threshold_b80_k0.2_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b40_k0.6_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b40_k0.6_downsampling2_text1.jpg)|
 
-![kristian_threshold](res/threshold_text1.jpg)
-
-Результирующее изображение c `k = 0.5`, `b = 10`:
-
-![kristian_threshold](res/threshold_10x05text1.jpg)
