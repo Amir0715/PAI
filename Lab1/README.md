@@ -1,34 +1,38 @@
 # Лабораторная работа №1
-## Тема: Передискретизация, обесцвечивание и бинаризация растровых изображений.
-#### Студент: Камолов Амир
-#### Группа: Б18-514
+
+## Тема: Передискретизация, обесцвечивание и бинаризация растровых изображений
+
+|**Студент:**|*Камолов Амир*|
+|------------|--------------|
+|**Группа:** |*Б18-514*     |
 
 ### 1. Передискретизация
 
-Исходное изображение размером `720x458` : 
+Исходное изображение размером `720x458` :
 
-![Original](original/text1.jpg)
+![Original](../original/text1.jpg)
 
-Исходное изображение размером `720x720` : 
+Исходное изображение размером `720x720` :
 
-![Original](original/spiral1.png)
+![Original](../original/spiral1.png)
 
 #### 1.1 Растяжение (интерполяция) изображения в M раз
-Интерполяция в 2 раза. Исходный размер `720x458` результирующий размер `1440x916`: 
+
+Интерполяция в 2 раза. Исходный размер `720x458` результирующий размер `1440x916`:
 
 ![UpsamplingX2](res/upsampling2_text1.jpg)
 
-Интерполяция в 3 раза. Исходный размер `720x458` результирующий размер `2160x1374`: 
+Интерполяция в 3 раза. Исходный размер `720x458` результирующий размер `2160x1374`:
 
 ![UpsamplingX3](res/upsampling_text1.jpg)
 
 ---
 
-Интерполяция в 2 раза. Исходный размер `720x720` результирующий размер `1440x1440`: 
+Интерполяция в 2 раза. Исходный размер `720x720` результирующий размер `1440x1440`:
 
 ![UpsamplingX2](res/upsampling2_spiral1.png)
 
-Интерполяция в 3 раза. Исходный размер `720x720` результирующий размер `2160x2160`: 
+Интерполяция в 3 раза. Исходный размер `720x720` результирующий размер `2160x2160`:
 
 ![UpsamplingX3](res/upsampling3_spiral1.png)
 
@@ -51,7 +55,6 @@
 Децимация в 3 раза. Исходный размер `720x720` результирующий размер `240x240`:
 
 ![DownsamplingX3](res/downsampling3_spiral1.png)
-
 
 #### 1.3 Передискретизация изображения в K=M/N раз путём растяжения и последующего сжатия (в два прохода)
 
@@ -77,14 +80,13 @@
 
 ![Resampling1loop](res/resampling_spiral1.png)
 
+### 2. Приведение полноцветного изображения к полутоновому
 
-### 2. Приведение полноцветного изображения к полутоновому.
+Исходное изображение:
 
-Исходное изображение: 
+![Original](../original/test10.png)
 
-![Original](original/test10.png)
-
-Результирующее изображение с обычными коэффицентами: 
+Результирующее изображение с обычными коэффицентами:
 
 ![SemitoneNormal](res/halftone_test10.png)
 
@@ -92,13 +94,13 @@
 
 ![SemitoneNormal](res/halftonePS_test10.png)
 
---- 
+---
 
-Исходное изображение: 
+Исходное изображение:
 
-![Original](original/test11.jpg)
+![Original](../original/test11.jpg)
 
-Результирующее изображение с обычными коэффицентами: 
+Результирующее изображение с обычными коэффицентами:
 
 ![SemitoneNormal](res/halftone_test11.jpg)
 
@@ -106,32 +108,30 @@
 
 ![SemitoneNormal](res/halftonePS_test11.jpg)
 
-### 3. Приведение полутонового изображения к монохромному методом пороговой обработки.
+### 3. Приведение полутонового изображения к монохромному методом пороговой обработки
+
 > Алгоритм адаптивной бинаризации Кристиана
 
-Исходное изображение: 
+Исходное изображение:
 
-![Original](original/cat.jpg)
+![Original](res/downsampling_cat2.jpg)
 
-Результирующее изображение c `k = 0.2`, `b = 15`:
+|**B \ K**		|					0.2								   |					0.6				    			  |					0.8                                  |
+|---------------|------------------------------------------------------|------------------------------------------------------|------------------------------------------------------|
+|**20** 		|![kristian_threshold](res/threshold_b20_k0.2_cat2.jpg)|![kristian_threshold](res/threshold_b20_k0.6_cat2.jpg)|![kristian_threshold](res/threshold_b20_k0.8_cat2.jpg)|
+|**40**			|![kristian_threshold](res/threshold_b40_k0.2_cat2.jpg)|![kristian_threshold](res/threshold_b40_k0.6_cat2.jpg)|![kristian_threshold](res/threshold_b40_k0.8_cat2.jpg)|
+|**80**			|![kristian_threshold](res/threshold_b80_k0.2_cat2.jpg)|![kristian_threshold](res/threshold_b80_k0.6_cat2.jpg)|![kristian_threshold](res/threshold_b80_k0.8_cat2.jpg)|
 
-![kristian_threshold](res/threshold_cat.jpg)
-
-Результирующее изображение c `k = 0.5`, `b = 10`:
-
-![kristian_threshold](res/threshold_10x05cat.jpg)
 
 ---
 
-Исходное изображение: 
+Исходное изображение:
 
-![Original](original/text1.jpg)
+![Original](res/downsampling2_text1.jpg)
 
-Результирующее изображение c `k = 0.2`, `b = 15`:
-
-![kristian_threshold](res/threshold_text1.jpg)
-
-Результирующее изображение c `k = 0.5`, `b = 10`:
-
-![kristian_threshold](res/threshold_10x05text1.jpg)
+|**B \ K**		|					0.2									|					0.6									|					0.8                                 |
+|---------------|-------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------|
+|**20** 		|![kristian_threshold](res/threshold_b20_k0.2_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b20_k0.6_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b20_k0.6_downsampling2_text1.jpg)|
+|**40**			|![kristian_threshold](res/threshold_b40_k0.2_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b20_k0.6_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b20_k0.6_downsampling2_text1.jpg)|
+|**80**			|![kristian_threshold](res/threshold_b80_k0.2_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b40_k0.6_downsampling2_text1.jpg)|![kristian_threshold](res/threshold_b40_k0.6_downsampling2_text1.jpg)|
 
