@@ -33,3 +33,26 @@ def kristian_threshold(image: Image.Image, k: float = 0.5, b: int = 3) -> Image.
                 new_image[y, x] = [255, 255, 255]
 
     return Image.fromarray(new_image.astype(np.uint8)).convert("RGB")
+
+
+def binarization(image: Image.Image, T: int = 127) -> Image.Image:
+    width = image.size[0]
+    height = image.size[1]
+
+    pix = np.array(image)
+    new_image = np.zeros_like(pix)
+
+    for x in range(width):
+        for y in range(height):
+            if image.mode == 'L':
+                if pix[y, x] >= T:
+                    new_image[y, x] = 255
+                else:
+                    new_image[y, x] = 0
+            elif image.mode == "RGB":
+                if pix[y, x, 0] >= T:
+                    new_image[y, x, :] = 255
+                else:
+                    new_image[y, x, :] = 0
+
+    return Image.fromarray(new_image.astype(np.uint8)).convert("RGB")
