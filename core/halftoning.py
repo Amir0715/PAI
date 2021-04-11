@@ -4,6 +4,8 @@ from PIL import ImageDraw
 
 
 def halftone(image: Image.Image, r=1 / 3, g=1 / 3, b=1 / 3) -> Image.Image:
+    if image.mode == "L":
+        return image
     pix = np.array(image)
     new_image = (r * pix[:, :, 0] + g * pix[:, :, 1] + b * pix[:, :, 2])
     return Image.fromarray(new_image.astype(np.uint8)).convert("RGB")
