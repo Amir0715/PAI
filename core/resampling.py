@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw
 import numpy as np
-
+import math
 
 def resampling(image: Image.Image, n: float, method: str = "nearest_neighbor") -> Image.Image:
     """
@@ -45,7 +45,6 @@ def cubic(pix, new_width, new_height) -> np.ndarray:
 
     for x in range(new_width):
         for y in range(new_height):
-
             x_1 = np.floor(x).astype(int)
             x_2 = x + 1
             y_1 = np.floor(y).astype(int)
@@ -58,9 +57,9 @@ def cubic(pix, new_width, new_height) -> np.ndarray:
 
             d = (x_2 - x_1) * (y_2 - y_1)
 
-            new_image[y, x] = (pix[y_1, x_1] / d) * w_a +\
-                              (pix[y_2, x_1] / d) * w_b +\
-                              (pix[y_1, x_2] / d) * w_c +\
+            new_image[y, x] = (pix[y_1, x_1] / d) * w_a + \
+                              (pix[y_2, x_1] / d) * w_b + \
+                              (pix[y_1, x_2] / d) * w_c + \
                               (pix[y_2, x_2] / d) * w_d
 
     return new_image
