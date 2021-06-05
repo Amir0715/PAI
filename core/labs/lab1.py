@@ -1,5 +1,3 @@
-import threading
-from numpy.lib.shape_base import tile
 from tqdm import tqdm
 from core.labs.titles import LAB1
 from core.math.resampling import resampling
@@ -139,12 +137,12 @@ f'''
                 for b, k in [(b, k) for b in B for k in K]:
                     threshold_image_path = os.path.join(self.third_step_path, f"b{b}_k{k}_{filename}")
                     threshold_image = kristian_threshold(image=halftoning, b=b, k=k)
-                    threshold_image.save()
+                    threshold_image.save(threshold_image_path)
 
                     f.write(f'''
 B = {b}, K = {k} : 
 
-![thresholding{b}x{k}](threshold_image_path)
+![thresholding{b}x{k}]({threshold_image_path})
 ''')
 
                 
