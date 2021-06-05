@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw
 import numpy as np
-import math
+from tqdm import tqdm
 
 def resampling(image: Image.Image, n: float, method: str = "nearest_neighbor") -> Image.Image:
     """
@@ -26,7 +26,7 @@ def resampling(image: Image.Image, n: float, method: str = "nearest_neighbor") -
 def nearest_neighbor(pix, width, height, new_width, new_height) -> np.ndarray:
     new_image = np.zeros((new_height, new_width, 3))
 
-    for x in range(new_width):
+    for x in tqdm(range(new_width), ascii=True, desc='Передискретизация изображения'):
         for y in range(new_height):
             src_x = min(
                 int(round(float(x) / float(new_width) * float(width))),
