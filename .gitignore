@@ -1,6 +1,6 @@
-/.idea/*
-pyenv_pai/*
-venv/*
+.idea/
+pyenv_pai/
+venv/
 *.mp4
-*/__pycache__/*
-.vscode/*
+__pycache__/
+.vscode/
