@@ -59,23 +59,23 @@ def calc_features(image: Image.Image, letter: str):
 
 
 # TODO: done profiles
-def profile_x(image: Image.Image, char: str):
+def profile_x(image: Image.Image, char: str, opath: str):
     image = np.array(image)
-    image[image == 0] = 1
-    image[image == 255] = 0
+    image[image <= 127] = 1
+    image[image > 127] = 0
     prof_y = np.sum(image, axis=0)
     prof_x = np.arange(start=1, stop=image.shape[1] + 1).astype(int)
     plt.bar(x=prof_x, height=prof_y)
     plt.ylim(0, image.shape[0] + 1)
     plt.xlim(0, image.shape[1] + 1)
-    plt.savefig(f'Lab4/res/profiles/x/{char}.png')
+    plt.savefig(f'{opath}/profiles/x/{char}.png')
     plt.clf()
 
 
-def profile_y(image: Image.Image, char: str):
+def profile_y(image: Image.Image, char: str, opath: str):
     image = np.array(image)
-    image[image == 0] = 1
-    image[image == 255] = 0
+    image[image <= 127] = 1
+    image[image > 127] = 0
     prof_y = np.sum(image, axis=1)
     prof_x = np.arange(start=1, stop=image.shape[0] + 1).astype(int)
 
@@ -83,7 +83,7 @@ def profile_y(image: Image.Image, char: str):
 
     plt.ylim(image.shape[0] + 1, 0)
     plt.xlim(0, image.shape[1] + 1)
-    plt.savefig(f'Lab4/res/profiles/y/{char}.png')
+    plt.savefig(f'{opath}/profiles/y/{char}.png')
     plt.clf()
 
 
