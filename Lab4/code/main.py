@@ -3,12 +3,12 @@ from PIL import Image, ImageFont
 from core.calc_features import *
 from core.generate import generate
 
-# foldepath = '/home/amir-kamolov/PycharmProjects/PAI/letters'
-#
+foldepath = '/home/amir/projects/PAI/letters'
+
 LETTERS = [char[0] for char in open('Lab4/code/letters.txt', 'r')]
-#
-# font = ImageFont.truetype("/home/amir-kamolov/PycharmProjects/PAI/fonts/Sylfaen.ttf", size=52)
-# generate(letters, font, foldepath)
+
+font = ImageFont.truetype("/home/amir/projects/PAI/fonts/Sylfaen.ttf", size=52)
+generate(LETTERS, font, foldepath)
 
 chars = glob.glob("letters/*.png")
 for char in LETTERS:
