@@ -103,9 +103,9 @@ def reference_image(img):
     return img.crop(new_sz)
 
 
-def gen_report(count: list):
+def gen_report(letters: list):
     with open('Lab5/README.md', 'w') as file:
-        for letter in range(count):
+        for letter in range(len(letters)):
             file.write(
                 f"""
 ### Буква №{letter}
