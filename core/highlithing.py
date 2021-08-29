@@ -1,6 +1,7 @@
 import numpy as np
 from PIL import Image
 
+
 def cut_letter(binimage: Image.Image):
     width = binimage.size[0]
     height = binimage.size[1]
@@ -14,7 +15,7 @@ def cut_letter(binimage: Image.Image):
 
     for x in range(width):
         for y in range(height):
-            if pix[y, x, 0] == 0:
+            if pix[y, x] == 0:
                 if x >= x2:
                     x2 = x
                 if x < x1:
@@ -33,5 +34,5 @@ def cut_letter(binimage: Image.Image):
         j += 1
         i = 0
 
-    return Image.fromarray(newimage.astype(np.uint8)).convert("RGB")
+    return Image.fromarray(newimage.astype(np.uint8)).convert("L")
 

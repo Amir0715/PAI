@@ -10,9 +10,9 @@ from core.thresholding import binarization
 LETTERS = [char[0] for char in open('Lab4/code/letters.txt', 'r')]
 
 
-def generate(letters: list, font, folderpath: str):
+def generate(letters: list, font, folderpath: str, size=(52, 52)):
     for letter in letters:
-        limag = Image.new(mode='RGB', size=(52, 52), color="white")
+        limag = Image.new(mode='L', size=size, color="white")
         draw = ImageDraw.Draw(limag)
         draw.text(xy=(0, 0), font=font, text=letter, fill="black")
         limag = binarization(limag)
