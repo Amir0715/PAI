@@ -16,5 +16,5 @@ for char in LETTERS:
     black_weight(image_char)
     unit_black_weight(image_char)
     calc_features(image_char, char)
-    profile_x(image_char, char)
-    profile_y(image_char, char)
+    profile_x(image_char, char, 'Lab4/res')
+    profile_y(image_char, char, 'Lab4/res')
