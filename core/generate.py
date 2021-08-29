@@ -7,7 +7,7 @@ from PIL import ImageFont
 from core.highlithing import cut_letter
 from core.thresholding import binarization
 
-LETTERS = [char[0] for char in open('Lab4/code/letters.txt', 'r')]
+LETTERS = [char[0] for char in open('Lab4/code/letters.txt', 'r', encoding="UTF-8")]
 
 
 def generate(letters: list, font, folderpath: str, size=(52, 52)):

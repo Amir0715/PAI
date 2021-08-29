@@ -176,7 +176,7 @@ def profile_y(image: Image.Image, char: str, opath: str):
 
 def export_csv(opath: str, letters, images_folder: str, mode='w', file=True):
     if file:
-        LETTERS = [char[0] for char in open(letters, 'r')]
+        LETTERS = [char[0] for char in open(letters, 'r', encoding="UTF-8")]
     else:
         LETTERS = letters
     with open(opath, mode, newline='') as csvfile:
