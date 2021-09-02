@@ -24,7 +24,6 @@ for global_char in global_chars:
 
 with open('Lab6/README.md', mode='a') as file:
     file.write("## Оценка близости для размера шрифта 52\n\n")
-    file.write("")
     for i, local_char in enumerate(local_chars):
         rows = find_match(Image.open(local_char), global_chars_tuple)
         file.write(f"### Буква {i}\n\n![]({'/'.join(local_char.split('/')[1:])})\n\n")
