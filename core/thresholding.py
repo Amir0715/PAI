@@ -55,4 +55,4 @@ def binarization(image: Image.Image, T: int = 127) -> Image.Image:
                 else:
                     new_image[y, x, :] = 0
 
-    return Image.fromarray(new_image.astype(np.uint8)).convert("RGB")
+    return Image.fromarray(new_image.astype(np.uint8)).convert("L")
