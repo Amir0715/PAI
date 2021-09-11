@@ -7,7 +7,6 @@ from PIL import ImageFont
 from core.highlithing import cut_letter
 from core.thresholding import binarization
 
-LETTERS = [char[0] for char in open('Lab4/code/letters.txt', 'r', encoding="UTF-8")]
 
 
 def generate(letters: list, font, folderpath: str, size=(52, 52)):
@@ -24,7 +23,7 @@ def generate(letters: list, font, folderpath: str, size=(52, 52)):
 def report():
     with open('Lab4/res/data.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
-        with open('Lab4/README.md', 'a+') as file:
+        with open('Lab4/README.md', 'w') as file:
             next(reader)
             for (i, letter), row in zip(enumerate(LETTERS), reader):
                 file.write(
@@ -44,11 +43,12 @@ def report():
 |Нормированный вес чёрного|{row[2]}|
 |Центр масс|{row[3]}|
 |Нормированный центр масс|{row[4]}|
-|Моменты инерции|{row[5]}|
-|Нормированные моменты инерции|{row[6]}|
+|Моменты инерции|({row[5]}, {row[6]})|
+|Нормированные моменты инерции|({row[7]}, {row[8]})|
 """
                 )
 
 
 if __name__ == '__main__':
+    LETTERS = [char[0] for char in open('Lab4/code/letters.txt', 'r', encoding="UTF-8")]
     report()

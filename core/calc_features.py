@@ -196,4 +196,5 @@ def export_csv(opath: str, letters, images_folder: str, mode='w', file=True):
 
 if __name__ == '__main__':
     method_prefix = 'Image_Features'
-    export_csv("Lab6/assets/data.csv", "Lab6/assets/letters.txt", "letters")
+    # export_csv("Lab6/assets/data.csv", "Lab6/assets/letters.txt", "letters")
+    export_csv("Lab4/res/data.csv", "Lab4/code/letters.txt", "letters")
