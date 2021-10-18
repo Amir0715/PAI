@@ -43,7 +43,7 @@ def attribute(matrix):
         for j in range(len(matrix[i])):
             con += ((i - j) ** 2) * matrix[i][j]
 
-    mrp = np.max(matrix)  # максимальная вероятность
+    mpr = np.max(matrix)  # максимальная вероятность
 
     lun = 0  # локальная однородность
     for i in range(len(matrix)):
@@ -79,7 +79,7 @@ def attribute(matrix):
     corr /= (sigma_i ** 0.5) * (sigma_j ** 0.5)
     return {
         "asm": asm,
-        "mrp": mrp,
+        "mpr": mpr,
         "ent": ent,
         "tr": tr,
         "con": con,
