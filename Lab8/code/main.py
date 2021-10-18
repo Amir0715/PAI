@@ -7,7 +7,7 @@ from tqdm import tqdm
 from core.contrasting import linear_contrasting, get_gist
 
 workspace = "Lab8"
-names = [f"{x}" for x in range(1, 6)]
+names = [f"{x}" for x in range(1, 7)]
 for name in names:
     filename = f"{name}.jpg"
 

@@ -97,3 +97,50 @@
 |80              |![](res/img/4/min_80/max_20/4.jpg)|![](res/img/4/min_80/max_100/4.jpg)|![](res/img/4/min_80/max_160/4.jpg)|![](res/img/4/min_80/max_240/4.jpg)
 |140             |![](res/img/4/min_140/max_20/4.jpg)|![](res/img/4/min_140/max_100/4.jpg)|![](res/img/4/min_140/max_160/4.jpg)|![](res/img/4/min_140/max_240/4.jpg)
 |220             |![](res/img/4/min_220/max_20/4.jpg)|![](res/img/4/min_220/max_100/4.jpg)|![](res/img/4/min_220/max_160/4.jpg)|![](res/img/4/min_220/max_240/4.jpg)
+
+
+## Исходное изображение
+
+![](assets/5.jpg)
+
+## Таблица результатов
+
+|Мин\макс яркость|20 |100|160|240|
+|---             |---|---|---|---|
+|0               |![](res/hist/5/min_0/max_20/hist.jpg)|![](res/hist/5/min_0/max_100/hist.jpg)|![](res/hist/5/min_0/max_160/hist.jpg)|![](res/hist/5/min_0/max_240/hist.jpg)
+|80              |![](res/hist/5/min_80/max_20/hist.jpg)|![](res/hist/5/min_80/max_100/hist.jpg)|![](res/hist/5/min_80/max_160/hist.jpg)|![](res/hist/5/min_80/max_240/hist.jpg)
+|140             |![](res/hist/5/min_140/max_20/hist.jpg)|![](res/hist/5/min_140/max_100/hist.jpg)|![](res/hist/5/min_140/max_160/hist.jpg)|![](res/hist/5/min_140/max_240/hist.jpg)
+|220             |![](res/hist/5/min_220/max_20/hist.jpg)|![](res/hist/5/min_220/max_100/hist.jpg)|![](res/hist/5/min_220/max_160/hist.jpg)|![](res/hist/5/min_220/max_240/hist.jpg)
+
+
+
+|Мин\макс яркость|20 |100|160|240|
+|---             |---|---|---|---|
+|0               |![](res/img/5/min_0/max_20/5.jpg)|![](res/img/5/min_0/max_100/5.jpg)|![](res/img/5/min_0/max_160/5.jpg)|![](res/img/5/min_0/max_240/5.jpg)
+|80              |![](res/img/5/min_80/max_20/5.jpg)|![](res/img/5/min_80/max_100/5.jpg)|![](res/img/5/min_80/max_160/5.jpg)|![](res/img/5/min_80/max_240/5.jpg)
+|140             |![](res/img/5/min_140/max_20/5.jpg)|![](res/img/5/min_140/max_100/5.jpg)|![](res/img/5/min_140/max_160/5.jpg)|![](res/img/5/min_140/max_240/5.jpg)
+|220             |![](res/img/5/min_220/max_20/5.jpg)|![](res/img/5/min_220/max_100/5.jpg)|![](res/img/5/min_220/max_160/5.jpg)|![](res/img/5/min_220/max_240/5.jpg)
+
+
+## Исходное изображение
+
+![](assets/6.jpg)
+
+## Таблица результатов
+
+|Мин\макс яркость|20 |100|160|240|
+|---             |---|---|---|---|
+|0               |![](res/hist/6/min_0/max_20/hist.jpg)|![](res/hist/6/min_0/max_100/hist.jpg)|![](res/hist/6/min_0/max_160/hist.jpg)|![](res/hist/6/min_0/max_240/hist.jpg)
+|80              |![](res/hist/6/min_80/max_20/hist.jpg)|![](res/hist/6/min_80/max_100/hist.jpg)|![](res/hist/6/min_80/max_160/hist.jpg)|![](res/hist/6/min_80/max_240/hist.jpg)
+|140             |![](res/hist/6/min_140/max_20/hist.jpg)|![](res/hist/6/min_140/max_100/hist.jpg)|![](res/hist/6/min_140/max_160/hist.jpg)|![](res/hist/6/min_140/max_240/hist.jpg)
+|220             |![](res/hist/6/min_220/max_20/hist.jpg)|![](res/hist/6/min_220/max_100/hist.jpg)|![](res/hist/6/min_220/max_160/hist.jpg)|![](res/hist/6/min_220/max_240/hist.jpg)
+
+
+
+|Мин\макс яркость|20 |100|160|240|
+|---             |---|---|---|---|
+|0               |![](res/img/6/min_0/max_20/6.jpg)|![](res/img/6/min_0/max_100/6.jpg)|![](res/img/6/min_0/max_160/6.jpg)|![](res/img/6/min_0/max_240/6.jpg)
+|80              |![](res/img/6/min_80/max_20/6.jpg)|![](res/img/6/min_80/max_100/6.jpg)|![](res/img/6/min_80/max_160/6.jpg)|![](res/img/6/min_80/max_240/6.jpg)
+|140             |![](res/img/6/min_140/max_20/6.jpg)|![](res/img/6/min_140/max_100/6.jpg)|![](res/img/6/min_140/max_160/6.jpg)|![](res/img/6/min_140/max_240/6.jpg)
+|220             |![](res/img/6/min_220/max_20/6.jpg)|![](res/img/6/min_220/max_100/6.jpg)|![](res/img/6/min_220/max_160/6.jpg)|![](res/img/6/min_220/max_240/6.jpg)
+
