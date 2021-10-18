@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from pydub import AudioSegment
 from scipy import signal
 workspace = "Lab9"
-filename = "fortepiano"
+filename = "voice"
 AudioSegment.converter = f"{workspace}/assets/ffmpeg/ffmpeg"
 AudioSegment.ffprobe = f"{workspace}/assets/ffmpeg/ffprobe"
 file = Path(f'{workspace}/assets/{filename}.wav')
