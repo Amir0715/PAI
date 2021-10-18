@@ -8,7 +8,7 @@ n = 0
 l = 256
 d = 3
 cross = False  # false - +; true - x
-images_name = [f'{i}.jpg' for i in range(1, 7)]
+images_name = [f'{i}.jpg' for i in range(1, 9)]
 attrs = ['asm', 'mpr', 'ent', 'tr']
 work_space = 'Lab7'
 
