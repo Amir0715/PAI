@@ -7,7 +7,7 @@ from core.calc_features import export_csv
 from core.classification import find_match
 from core.generate import generate
 from core.utils import segmentation
-
+from core.thresholding import binarization
 
 LETTERS = [char[0] for char in open('Lab6/assets/letters.txt', 'r', encoding="UTF-8")]
 font = ImageFont.truetype("/home/amir/projects/PAI/fonts/Sylfaen.ttf", size=32)
@@ -15,6 +15,7 @@ generate(LETTERS, font, 'Lab6/assets/default_chars')
 export_csv("Lab6/assets/default_data.csv", LETTERS, "Lab6/assets/default_chars", file=False)
 
 sentence = Image.open("Lab6/assets/sentence2.png").convert('L')
+sentence = binarization(sentence)
 segmentation(sentence, 'Lab6/res/segmentation/chars')
 global_chars = glob.glob('Lab6/assets/default_chars/*.png')
 local_chars = glob.glob('Lab6/res/segmentation/chars/*.png')
