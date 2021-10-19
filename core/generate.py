@@ -8,7 +8,6 @@ from core.highlithing import cut_letter
 from core.thresholding import binarization
 
 
-
 def generate(letters: list, font, folderpath: str, size=(52, 52)):
     for letter in letters:
         limag = Image.new(mode='L', size=size, color="white")
@@ -20,7 +19,7 @@ def generate(letters: list, font, folderpath: str, size=(52, 52)):
         limag.save(path)
 
 
-def report():
+def report(LETTERS):
     with open('Lab4/res/data.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
         with open('Lab4/README.md', 'w') as file:
