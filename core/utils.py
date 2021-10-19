@@ -46,6 +46,7 @@ def segmentation(img, opath):
     x_profiles, y_profiles = get_profiles(img)
     ep = 0
     res = []
+    step = 0
     for i in range(len(x_profiles)):
 
         if x_profiles[i] <= ep:
@@ -105,6 +106,13 @@ def reference_image(img):
 
 def gen_report(letters: list):
     with open('Lab5/README.md', 'w') as file:
+        file.write(f"""
+### Строка
+
+![sentence](assets/sentence.png)
+
+![invert_sentence](assets/invert_sentence.png)
+""")
         for letter in range(len(letters)):
             file.write(
                 f"""

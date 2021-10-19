@@ -3,9 +3,9 @@ from PIL import ImageChops, Image
 
 from core.calc_features import profile_x, profile_y
 from core.utils import segmentation, gen_report
-
+from core.thresholding import binarization
 img = Image.open(f'Lab5/assets/sentence.png').convert("L")
-
+img = binarization(img)
 invert_img = ImageChops.invert(img)
 invert_img.save(f'Lab5/assets/invert_sentence.png')
 
